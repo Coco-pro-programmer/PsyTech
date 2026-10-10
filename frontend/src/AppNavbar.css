@@ -1,0 +1,203 @@
+
+/* ==========================================
+   PSYTECH — NAVBAR
+   PINK 65% | BLUE 20% | GREEN 15%
+   ========================================== */
+
+.psytech-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 5%;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border-color, #f0dce4);
+  backdrop-filter: blur(14px);
+}
+
+.psytech-navbar-inner {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.psytech-navbar-heading {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.psytech-navbar-logo {
+  color: var(--text-main, #553747);
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.psytech-navbar-divider {
+  width: 1px;
+  height: 30px;
+  flex-shrink: 0;
+  background: var(--border-color, #f0dce4);
+}
+
+.psytech-navbar-page {
+  overflow: hidden;
+  color: var(--text-secondary, #866d79);
+  font-size: 1rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.psytech-navbar-links {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.psytech-navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
+.psytech-navbar-link {
+  position: relative;
+  flex-shrink: 0;
+  padding: 8px 0;
+  color: var(--text-secondary, #866d79);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.psytech-navbar-link:hover,
+.psytech-navbar-link.active {
+  color: var(--primary-dark, #bd527c);
+}
+
+.psytech-navbar-link.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary, #d96c98);
+  content: "";
+}
+
+.psytech-navbar-logout,
+.psytech-navbar-register {
+  flex-shrink: 0;
+  padding: 8px 13px;
+  border: 1px solid var(--border-color, #f0dce4);
+  border-radius: 9px;
+  background: #ffffff;
+  color: var(--text-secondary, #866d79);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.psytech-navbar-logout:hover,
+.psytech-navbar-register:hover {
+  border-color: var(--primary, #d96c98);
+  background: var(--primary-light, #fde8ef);
+  color: var(--primary-dark, #bd527c);
+}
+
+.psytech-navbar a:focus-visible,
+.psytech-navbar button:focus-visible {
+  outline: 3px solid rgba(113, 158, 219, 0.7);
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1100px) {
+  .psytech-navbar-inner {
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    padding: 12px 0;
+  }
+
+  .psytech-navbar-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 2px;
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+   ========================================== */
+
+@media (max-width: 600px) {
+  .psytech-navbar {
+    min-height: 0;
+    padding: 0 5%;
+  }
+
+  .psytech-navbar-inner {
+    gap: 8px;
+    padding: 11px 0 9px;
+  }
+
+  .psytech-navbar-heading {
+    gap: 11px;
+  }
+
+  .psytech-navbar-logo {
+    font-size: 1.35rem;
+  }
+
+  .psytech-navbar-divider {
+    height: 25px;
+  }
+
+  .psytech-navbar-page {
+    font-size: 0.9rem;
+  }
+
+  .psytech-navbar-links {
+    gap: 17px;
+  }
+
+  .psytech-navbar-link,
+  .psytech-navbar-logout,
+  .psytech-navbar-register {
+    font-size: 0.78rem;
+  }
+
+  .psytech-navbar-logout,
+  .psytech-navbar-register {
+    padding: 7px 11px;
+  }
+}

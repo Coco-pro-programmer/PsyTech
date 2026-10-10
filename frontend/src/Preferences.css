@@ -1,0 +1,302 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.preferences-page {
+  min-height: 100vh;
+  background: #f5faf8;
+  color: #304e4a;
+  font-family: inherit;
+}
+
+.preferences-header {
+  min-height: 76px;
+  padding: 0 max(6%, calc((100% - 1180px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-bottom: 1px solid #e4efeb;
+}
+
+.preferences-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #315b54;
+  text-decoration: none;
+}
+
+.preferences-brand-mark {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e4f2ed;
+  color: #34786d;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.preferences-brand strong,
+.preferences-brand small {
+  display: block;
+}
+
+.preferences-brand small {
+  margin-top: 3px;
+  color: #829590;
+  font-size: 11px;
+}
+
+.preferences-header nav {
+  display: flex;
+  gap: 22px;
+}
+
+.preferences-header nav a,
+.preferences-back {
+  color: #628078;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.preferences-header nav a:hover,
+.preferences-back:hover {
+  color: #337d74;
+}
+
+.preferences-main {
+  width: min(960px, 88%);
+  margin: 0 auto;
+  padding: 42px 0 70px;
+}
+
+.preferences-back {
+  display: inline-block;
+  margin-bottom: 28px;
+}
+
+.preferences-intro {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.preferences-eyebrow {
+  color: #4d9386;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.preferences-intro h1 {
+  margin: 10px 0 12px;
+  color: #294f4a;
+  font-size: clamp(29px, 4vw, 42px);
+  letter-spacing: -0.04em;
+}
+
+.preferences-intro p {
+  max-width: 610px;
+  margin: 0;
+  color: #718783;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.preferences-count {
+  margin-top: 16px;
+  color: #4c8278;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.preference-option {
+  min-height: 112px;
+  padding: 19px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  border: 1px solid #dceae5;
+  border-radius: 16px;
+  background: #fff;
+  color: #31534e;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.preference-option:hover {
+  transform: translateY(-2px);
+  border-color: #a9cec3;
+  box-shadow: 0 8px 22px #294f4a0d;
+}
+
+.preference-option.selected {
+  border: 2px solid #4a9588;
+  background: #f0f8f5;
+  padding: 18px;
+}
+
+.preference-icon {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eaf5f1;
+  font-size: 20px;
+}
+
+.preference-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.preference-copy strong,
+.preference-copy small {
+  display: block;
+}
+
+.preference-copy strong {
+  font-size: 13px;
+}
+
+.preference-copy small {
+  margin-top: 6px;
+  color: #7a8d88;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.preference-check {
+  flex: 0 0 23px;
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d9e8e2;
+  border-radius: 50%;
+  color: #8aa39b;
+  font-size: 14px;
+}
+
+.selected .preference-check {
+  border-color: #4a9588;
+  background: #4a9588;
+  color: white;
+  font-weight: 800;
+}
+
+.preferences-note {
+  margin: 21px 0;
+  color: #80918d;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.preferences-message {
+  margin: 15px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.preferences-message.error {
+  background: #fff3f1;
+  border: 1px solid #f0d6d1;
+  color: #9b5b53;
+}
+
+.preferences-message.success {
+  background: #edf8f2;
+  border: 1px solid #cce9d9;
+  color: #39735b;
+}
+
+.preferences-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.preferences-save {
+  min-height: 46px;
+  padding: 0 23px;
+  border: 0;
+  border-radius: 12px;
+  background: #337d74;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.preferences-save:hover:not(:disabled) {
+  background: #28685f;
+}
+
+.preferences-save:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.preferences-cancel {
+  color: #718783;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.preferences-loading {
+  padding: 35px;
+  text-align: center;
+  color: #718783;
+}
+
+@media (max-width: 650px) {
+  .preferences-header {
+    min-height: 66px;
+    padding: 0 5%;
+  }
+
+  .preferences-header nav {
+    gap: 12px;
+  }
+
+  .preferences-header nav a {
+    font-size: 11px;
+  }
+
+  .preferences-main {
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  .preferences-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .preference-option {
+    min-height: 95px;
+    padding: 15px;
+  }
+
+  .preference-option.selected {
+    padding: 14px;
+  }
+}
